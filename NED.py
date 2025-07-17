@@ -17,32 +17,6 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 phobert_model = AutoModel.from_pretrained(model_name)
 
 embedding_cache1 = Memory("cache/embeddingsPhoBert", verbose=0)
-
-def load_csv_dir(dir="result"):
-    """
-    Load CSV files from a directory and combine them into a DataFrame.
-    Each row gets a unique ID.
-    """
-    csv_files = glob(f"{dir}/*.csv")
-    print(f"Found {len(csv_files)} CSV files in {dir}")
-
-    all_dfs = []
-
-    for csv_file in csv_files:
-        df = pd.read_csv(csv_file, encoding="utf-8-sig", sep=";")
-        print(f" - {csv_file}: {len(df)} rows")
-        all_dfs.append(df)
-
-    if all_dfs:
-        combined_df = pd.concat(all_dfs, ignore_index=True)
-        print(f"Combined dataset: {len(combined_df)} rows")
-
-        combined_df["id"] = [str(uuid4()) for _ in range(len(combined_df))]
-
-        return combined_df
-    else:
-        print("No data loaded.")
-        return None
     
 def load_csv():
     df = pd.read_csv('content/dataset.csv', encoding='utf-8', sep=";")
@@ -191,11 +165,7 @@ def applyNED():
     df.to_csv("content/datasetNED.csv", index=False, encoding="utf-8-sig", sep=";")   
     
 def main():
-    
     applyNED()
-    
-    
-     
     
 if __name__ == "__main__":
     main()
