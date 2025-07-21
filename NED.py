@@ -1,10 +1,7 @@
 from underthesea import ner
-from wikipedia import *
 from transformers import AutoModel, AutoTokenizer
 from sklearn.metrics.pairwise import cosine_similarity
-from uuid import uuid4
 from tqdm import tqdm
-from glob import glob
 from joblib import Memory
 import pandas as pd 
 import numpy as np

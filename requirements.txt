@@ -1,0 +1,21 @@
+# Core dependencies
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+tqdm
+joblib
+
+# PyTorch and KAN
+torch
+fastkan @ git+https://github.com/ZiyaoLi/fast-kan.git
+
+# Transformers and Tokenization
+transformers
+underthesea
+
+
+# Optional (if using GPU-specific features)
+# torch should match your CUDA version, e.g.:
+# torch==2.1.0+cu118 -f https://download.pytorch.org/whl/torch_stable.html
