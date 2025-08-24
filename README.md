@@ -40,18 +40,18 @@ Academic regulation documents are notoriously difficult to classify due to ambig
 ### Results of KAN models using different dictionaries
 
 | ID                                      | Models             | Architecture | Feature Type | Acc (%) | Prec (%) | Rec (%) | F1 (%) |
-| --------------------------------------- | ------------------ | ------------ | ------------ | ------- | -------- | ------- | ------ | --- |
-| **Raw dataset**                         |                    |              |              |         |          |         |        |     |
+| --------------------------------------- | ------------------ | ------------ | ------------ | ------- | -------- | ------- | ------ | 
+| **Raw dataset**                         |                    |              |              |         |          |         |        | 
 | 1                                       | KAN Deeper TF-IDF  | 265,128,64,6 | TF-IDF       | 97.48   | 97.84    | 97.21   | 97.48  |
 | 2                                       | KAN Simple TF-IDF  | 128,64,6     | TF-IDF       | 97.34   | 97.73    | 97.08   | 97.32  |
 | 3                                       | KAN Simple PhoBERT | 128,64,6     | PhoBERT      | 93.29   | 93.42    | 93.36   | 93.26  |
 | 4                                       | KAN Wide PhoBERT   | 256,6        | PhoBERT      | 93.01   | 93.16    | 93.00   | 92.82  |
-| **Specialized word dictionary dataset** |                    |              |              |         |          |         |        |     |
+| **Specialized word dictionary dataset** |                    |              |              |         |          |         |        |
 | 1                                       | KAN Deeper TF-IDF  | 265,128,64,6 | TF-IDF       | 97.90   | 98.00    | 97.68   | 97.79  |
 | 2                                       | KAN Simple TF-IDF  | 128,64,6     | TF-IDF       | 97.62   | 98.10    | 97.28   | 97.60  |
 | 3                                       | KAN Simple PhoBERT | 128,64,6     | PhoBERT      | 94.13   | 94.32    | 94.16   | 94.14  |
 | 4                                       | KAN Wide PhoBERT   | 256,6        | PhoBERT      | 93.57   | 93.85    | 93.41   | 93.37  |
-| **tudientv dictionary dataset**         |                    |              |              |         |          |         |        |     |
+| **tudientv dictionary dataset**         |                    |              |              |         |          |         |        | 
 | 1                                       | KAN Deeper TF-IDF  | 265,128,64,6 | TF-IDF       | 95.24   | 95.61    | 95.18   | 95.38  |
 | 2                                       | KAN Simple TF-IDF  | 128,64,6     | TF-IDF       | 94.97   | 95.16    | 95.11   | 95.13  |
 | 3                                       | KAN Simple PhoBERT | 128,64,6     | PhoBERT      | 89.23   | 89.41    | 89.72   | 89.53  |
